@@ -1,12 +1,8 @@
-import React, {useState, useEffect} from 'react'
-import ItemCount from './ItemCount'
-import {getFetch} from "./getFetch"
-import ItemListContainer from "./ItemListContainer"
-
+import {useParams} from 'react-router-dom'
 
 function ItemDetailContainer(){
-    const [productos, setProductos] = useState([])
-    getFetch.then(resp => setProductos(resp))
+    const {id} = useParams()
+    console.log(id)
     return(
         <>
         <div>

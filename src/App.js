@@ -1,3 +1,5 @@
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+
 import './App.css';
 import CartWidget from './components/NavBar/CartWidget'
 import NavBar from './components/NavBar/NavBar'
@@ -7,14 +9,20 @@ import ItemDetailContainer from './components/NavBar/ItemDetailContainer'
 
 function App() {
 	return (
+		<BrowserRouter>
 		<div className="App">
-			<header className="App-header">
+			<header className="App-header"> 
 				<NavBar />
-				<ItemListContainer saludo='Hola soy el Item List Container' />
-				<ItemDetailContainer saludo='Hola soy el Item Detail Container' />				
+				<Routes>
+					<Route exact path="/" element={<ItemListContainer saludo='Hola soy el ILC'/>}/>
+					<Route exact path="/categoria/:idCate" element={<ItemListContainer saludo='Hola soy el ILC'/>}/>
+					<Route exact path="/detalle/:id" element={<ItemDetailContainer saludo='ILC'/>}/>
+				</Routes>
 			</header>
 		</div>
+		</BrowserRouter>
 	);
 }
+//<Route exact path="/" element={<CartWidget/>}/>
 
 export default App;
