@@ -1,6 +1,10 @@
+import {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
+import ItemCount from './ItemCount'
+import {getFetch} from './getFetch'
 
 function ItemDetailContainer(){
+    const [productos, setProductos] = useState ([])
     const {id} = useParams()
     console.log(id)
     return(
@@ -18,10 +22,10 @@ function ItemDetailContainer(){
                     <button style={{width:"200px",height:"50px"}}>
                         Detalles
                     </button>
-                    <ItemCount/>
+                    <ItemCount/>          
                     <button style={{width:"200px",height:"50px"}}>
                         Añadir al Carrito
-                    </button>
+                    </button> 
                 </div>
                 </></></>
             )}
@@ -29,5 +33,4 @@ function ItemDetailContainer(){
         </>
     )
 }
-
 export default ItemDetailContainer

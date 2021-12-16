@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 function ItemCount(){
-    const [ contador, setContador ] = useState(0)
+    const [ contador, setContador ] = useState(1)
 
     console.log(contador)
 
@@ -13,9 +13,9 @@ function ItemCount(){
     }
     return(
         <div>
-            <p>{contador}</p>
-            <button onClick={handlerClickSuma}  style={{width: "100px", height: "50px"}}>+</button>
-            <button onClick={handlerClickResta} style={{width: "100px", height: "50px"}}>-</button>
+            <p>Cantidad: {contador}</p>
+            <button type="button" class="btn btn-secondary" onClick={handlerClickSuma}  style={{width: "45px"}}>+</button>    
+            <button type="button" class="btn btn-secondary" onClick={handlerClickResta} style={{width: "45px"}}>-</button>    
         </div>
     )
 }
