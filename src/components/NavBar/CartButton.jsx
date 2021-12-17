@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import { Link } from 'react-router-dom'
+import ItemCount from './ItemCount'
 
 export default function CartButton(){
     const [option, setOption] = useState(1)
@@ -10,10 +11,13 @@ export default function CartButton(){
     return(
         <>
         {option === 1 ?
-            <button type="button" class="btn btn-primary" option={option} onClick={optionSelected} defaultOption={option}>Agregar al Carrito</button>
+            <div>
+                <ItemCount/>
+                <button type="button" class="btn btn-primary" option={option} onClick={optionSelected} defaultOption={option}>Agregar al Carrito</button>
+            </div>
             :
             <Link to="/cart">
-                <button type="button" class="btn btn-success">¡Agregado! ver carrito</button>    
+                <br/><button type="button" class="btn btn-success">¡Agregado! ver carrito</button>    
             </Link>
         }
         </>

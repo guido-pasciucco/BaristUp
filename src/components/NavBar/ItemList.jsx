@@ -19,7 +19,7 @@ function ItemList(){
                     <h5>Cat.: {producto.categoria}</h5>
                     <h2>${producto.precio}</h2>
                     <button type="button" class="btn btn-secondary">Detalles</button>    
-                    <ItemCount/>
+                    
                     <CartButton />
                 </div>
                 </></></>
@@ -29,3 +29,4 @@ function ItemList(){
     )
 }
 export default ItemList
+//<ItemCount/>
