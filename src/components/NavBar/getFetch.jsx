@@ -15,7 +15,7 @@ const productos = [
 {id:5,img:imagen5,categoria:"Accesorios",titulo:"Tazas Oslo 180ml"          ,precio:2990,  detalle:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a sollicitudin metus. Donec eleifend tellus sem, sodales velit dictum amet. Duis sagittis nec ma ultricies. Sed varius neque in vehicula varius."},
 {id:6,img:imagen6,categoria:"Accesorios",titulo:"Mocca Master KBG Select"   ,precio:108770,detalle:"Certificada por la ECBC (European Coffee Brewing Center) y SCA (Specialty Coffee Association) bajo estrictos controles y siendo así la mejor máquina para la preparación de café filtrado y te contamos porque."},
 {id:7,img:imagen7,categoria:"Accesorios",titulo:"Bialetti Moka Express"     ,precio:11000, detalle:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a sollicitudin metus. Donec eleifend tellus sem, sodales velit dictum amet. Duis sagittis nec ma ultricies. Sed varius neque in vehicula varius."}
-];
+]
 
 export const getFetch = new Promise ((resolve)=>{
     setTimeout(()=>{

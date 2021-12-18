@@ -20,6 +20,7 @@ export default function CartButton(){
                 <br/><button type="button" class="btn btn-success">¡Agregado! ver carrito</button>    
             </Link>
         }
+        
         </>
     )
 }

@@ -28,7 +28,7 @@ function ItemListContainer({greeting}){
             {loading ?
                 <h2>Cargando...</h2>
                 :
-                <ItemList productos={productos} />
+                <ItemList productos={productos}/>
             }
         </div>
     )

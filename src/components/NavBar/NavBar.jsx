@@ -4,9 +4,9 @@ import CartWidget from './CartWidget'
 
 const NavBar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{width: "100%", display: "flex"}} >
-        <div className="container-fluid" style={{justifyContent: "space-evenly"}} >
-            <div className="collapse navbar-collapse" id="navbarNav" style={{justifyContent: "space-evenly"}} >
+        <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{width: "100%", display: "flex"}}>
+        <div className="container-fluid" style={{justifyContent: "space-evenly"}}>
+            <div className="collapse navbar-collapse" id="navbarNav" style={{justifyContent: "space-evenly"}}>
                 <a className="navbar-brand" href="/#" style={{paddingLeft: "50"}}>
                     <strong>BaristUP</strong>
                     <br/>
@@ -36,4 +36,6 @@ const NavBar = () => {
     )
 }
 
-export default NavBar;
+export default NavBar
+
+
