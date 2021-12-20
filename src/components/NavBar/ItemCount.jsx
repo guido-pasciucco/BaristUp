@@ -11,6 +11,7 @@ function ItemCount(){
     const handlerClickResta = ()=>{
         setContador(contador-1)
     }
+
     return(
         <div>
             <p>

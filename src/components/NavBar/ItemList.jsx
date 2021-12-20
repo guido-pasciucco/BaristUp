@@ -7,7 +7,6 @@ import CartButton from './CartButton'
 import { CartContext } from './CartContext'
 
 function ItemList(){
-
     const contexto = useContext(CartContext)
     console.log(contexto)
     const [productos, setProductos] = useState([])

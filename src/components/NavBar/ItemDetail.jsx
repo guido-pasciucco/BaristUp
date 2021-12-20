@@ -8,33 +8,22 @@ function ItemDetail({prod}){
 
     const {cartList, agregarAlCarrito} = useContext(CartContext)
 
-    function onAdd(cant){
+    //const onAdd = ()=>{addItem(item, cantidad)}
+
+    /* ESTE ES EL ONADD */
+    function onAdd (cant){
         console.log(cant)
-        agregarAlCarrito({...prod, cantidad:cant})
+        agregarAlCarrito({...prod, cant:cant})
     }
+
     //console.log(prod)
     return(
-        <Row>
-            <label>Soy el Detalle</label>
-            <Col>
-                <div className='card w-50' >
-                    <div className='container'>
-                        <label>
-                            {prod.title}
-                        </label>
-                    </div>
-                    <div className='container'>
-                        <img src={prod.foto} className='w-25' alt='foto'/>
-                        <br/>
-                        <label>
-                            {prod.descripcion}
-                        </label>
-                        <label>
-                            {prod.categoria}
-                        </label>
-                    </div>
-                </div>
-            </Col>
-        </Row>
+        <>
+        <label>Soy el Detalle</label>
+        <p>Soy el Detalle</p>
+        <button onAdd={onAdd}> AGREGAR AL CHANGUITO</button>
+        </>
     )
 }
+
+export default ItemDetail
