@@ -7,6 +7,7 @@ function ItemListContainer({greeting}){
     const [productos, setProductos] = useState ([])
     const [loading, setLoading] = useState(true)
     const {idCate} = useParams()
+    
     useEffect(()=>{
         if(idCate){
             getFetch
@@ -20,8 +21,9 @@ function ItemListContainer({greeting}){
             .finally(()=> setLoading(false))
         }
     },[idCate])
+    
     console.log(idCate)
-    // [] => RETORNA OTRO ARRAY 
+    
     return (
         <div>
             {greeting}

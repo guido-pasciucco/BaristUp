@@ -1,26 +1,21 @@
 import { useContext } from "react"
 import { CartContext } from "./CartContext"
-import { CartButton } from "./CartButton"
-import ItemDetail from "./ItemDetail"
-import ItemListContainer from "./ItemListContainer"
-import ItemList from "./ItemList"
-import ItemDetailContainer from "./ItemDetailContainer"
-import { getFetch } from "./getFetch"
-import Item from './Item'
+import { Link } from 'react-router-dom'
 
 function Cart(){
     const { cartList, borrarCarrito, quitarDelCarrito } = useContext(CartContext)
     console.log(cartList)
     return(
         <div>
-            <button onClick={borrarCarrito}>Vaciar Carrito</button>
-            ACA EMPIEZA EL CARRITO
+            <button onClick={borrarCarrito} style={{width:"300px"}}>Vaciar Carrito</button>
+            <Link to="/">
+                <button style={{width:"300px"}} >Seguir comprando</button>
+            </Link>
             {cartList.map(prod=>
-                <li>
-                    <p>Nombre {prod.name}</p>
-                    <p>Cantidad {prod.cantidad}</p> 
-                    <button id={prod.id} onClick={quitarDelCarrito}>Quitar Item</button>
-                </li>
+                <div style={{border:"2px solid red",padding:"20px", width:"600px"}} >
+                    <p> {prod.cantidad} Un. {prod.item.titulo} </p> 
+                    <button id={prod.id} onClick={()=>quitarDelCarrito(prod.item.id)}>Quitar Item</button>
+                </div>
             )}
         </div>
     )

@@ -1,24 +1,21 @@
 import {Link} from 'react-router-dom'
 
-function Item ({prod}){
+function Item ({producto}){
     return(
-        <div key={prod.id} className="col-md-4">
-            <div className="card w-100 mt-5">
-                <div className="card-header">
-                    ['${prod.name} ${prod.categoria}']
-                </div>
-                <div className="card-body">
-                    <img src={prod.foto} alt="" className="w-50"/>
-                    {prod.price}                
-                </div>
-                <div className="card-footer">
-                    <Link to={`/detalle/${prod.id}`}>
-                        <button className="btn btn outline primary btn block">
-                            Detalle del Producto
-                        </button>
-                    </Link>
-                </div>
-            </div>
+        <><><>
+        <div style={{border:"2px solid green",padding:"20px"}}>
+            <h1 key={producto.id}>{producto.titulo}</h1>
+            <img src={producto.img} style={{width:"auto",height:"250px"}}/>
+            <h5>Cat.: {producto.categoria}</h5>
+            <h2>${producto.precio}</h2>
+            <Link to={`/detalle/${producto.id}`}>
+                <button className="btn btn outline primary btn block">
+                    Detalle del Producto
+                </button>
+            </Link>
         </div>
+        </></></>
     )
 }
+
+export default Item
