@@ -9,7 +9,7 @@ function Item ({producto}){
             <h5>Cat.: {producto.categoria}</h5>
             <h2>${producto.precio}</h2>
             <Link to={`/detalle/${producto.id}`}>
-                <button className="btn btn outline primary btn block">
+                <button className="btn btn outline success btn block">
                     Detalle del Producto
                 </button>
             </Link>

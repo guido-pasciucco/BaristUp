@@ -1,14 +1,16 @@
-import React, {useState, useContext} from 'react'
-
+import React, {useState, useContext, memo } from 'react'
 import Item from './Item'
 
-function ItemList({productos}){  
-    return(
-        <>
-        <div>
-            {productos.map(producto => <Item producto={producto}/>)}
-        </div>
-        </>
-    )
-}
+const ItemList = memo(
+    ({productos}) => {
+        return(
+            <>
+            <div>
+                {productos.map(producto => <Item producto={producto}/>)}
+            </div>
+            </>
+        )    
+    }
+)
+
 export default ItemList

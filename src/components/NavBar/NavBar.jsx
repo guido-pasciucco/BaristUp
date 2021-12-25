@@ -8,9 +8,7 @@ const NavBar = () => {
         <div className="container-fluid" style={{justifyContent: "space-evenly"}}>
             <div className="collapse navbar-collapse" id="navbarNav" style={{justifyContent: "space-evenly"}}>
                 <a className="navbar-brand" href="/#" style={{paddingLeft: "50"}}>
-                    <strong>BaristUP</strong>
-                    <br/>
-                    <p>Fanáticos del café</p></a>
+                    <strong>BaristUP</strong><br/><p>Fanáticos del café</p></a>
                 <ul className="navbar-nav">
                     <Link to="/categoria/cafe">
                         <li className="nav-item">
@@ -24,9 +22,7 @@ const NavBar = () => {
                     </Link>
                     <Link to="/cart">
                         <li className="nav-item">
-                            <a className="nav-link"> Carrito
-                                <CartWidget />
-                            </a>
+                            <a className="nav-link"> Carrito <CartWidget /></a>
                         </li>
                     </Link>
                 </ul>
