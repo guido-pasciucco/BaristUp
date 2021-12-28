@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
-import {getFetch} from './getFetch'
+import {getFetch} from '../ItemListContainer/getFetch'
 import ItemDetail from './ItemDetail'
 
 function ItemDetailContainer(){

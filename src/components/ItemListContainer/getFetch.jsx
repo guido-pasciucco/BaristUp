@@ -1,11 +1,11 @@
 
-import imagen1 from './imgs/cafe_blend_brasil_colombia.jpg'
-import imagen2 from './imgs/cafe_etiopia.jpg'
-import imagen3 from './imgs/cafe_guatemala.jpg'
-import imagen4 from './imgs/pava_cisne_inox.jpg'
-import imagen5 from './imgs/tazas_oslo_180.jpg'
-import imagen6 from './imgs/mocca_master.jpg'
-import imagen7 from './imgs/bialetti_moka_express.jpg'
+import imagen1 from '../imgs/cafe_blend_brasil_colombia.jpg'
+import imagen2 from '../imgs/cafe_etiopia.jpg'
+import imagen3 from '../imgs/cafe_guatemala.jpg'
+import imagen4 from '../imgs/pava_cisne_inox.jpg'
+import imagen5 from '../imgs/tazas_oslo_180.jpg'
+import imagen6 from '../imgs/mocca_master.jpg'
+import imagen7 from '../imgs/bialetti_moka_express.jpg'
 
 const productos = [
 {id:1,img:imagen1,categoria:"Cafe"      ,titulo:"Café Blend Brasil Colombia",precio:1170,  detalle:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a sollicitudin metus. Donec eleifend tellus sem, sodales velit dictum amet. Duis sagittis nec ma ultricies. Sed varius neque in vehicula varius."},
@@ -22,3 +22,4 @@ export const getFetch = new Promise ((resolve)=>{
         resolve(productos)
     }, 500)
 })
+
