@@ -1,4 +1,4 @@
-
+/*
 import imagen1 from '../imgs/cafe_blend_brasil_colombia.jpg'
 import imagen2 from '../imgs/cafe_etiopia.jpg'
 import imagen3 from '../imgs/cafe_guatemala.jpg'
@@ -23,3 +23,4 @@ export const getFetch = new Promise ((resolve)=>{
     }, 500)
 })
 
+*/

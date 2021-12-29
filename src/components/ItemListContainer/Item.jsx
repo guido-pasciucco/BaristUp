@@ -13,8 +13,7 @@ function Item ({producto}){
                     Detalle del Producto
                 </button>
             </Link>
-        </div>
-        </></></>
+        </div></></></>
     )
 }
 
