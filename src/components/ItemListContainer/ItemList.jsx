@@ -5,8 +5,10 @@ const ItemList = memo(
     ({productos}) => {
         return(
             <>
-            <div>
+            <div className='container' >
+            <div className='row' style={{display: "flex"}} >
                 {productos.map(producto => <Item producto = {producto}/>)}
+            </div>
             </div>
             </>
         )    

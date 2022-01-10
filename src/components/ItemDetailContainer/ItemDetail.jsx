@@ -28,3 +28,4 @@ function ItemDetail({productos}){
 }
 
 export default ItemDetail
+

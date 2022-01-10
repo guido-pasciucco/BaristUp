@@ -3,17 +3,25 @@ import {Link} from 'react-router-dom'
 function Item ({producto}){
     return(
         <><><>
-        <div style={{border:"2px solid green",padding:"20px"}}>
-            <h1 key={producto.id}>{producto.titulo}</h1>
-            <img src={producto.img} style={{width:"auto",height:"250px"}}/>
-            <h5>Cat.: {producto.categoria}</h5>
-            <h2>${producto.precio}</h2>
-            <Link to={`/detalle/${producto.id}`}>
-                <button className="btn btn outline success btn block">
-                    Detalle del Producto
-                </button>
-            </Link>
-        </div></></></>
+        <div className="card col-md-4" style={{ height : "700px", backgroundColor : "brown", justifyContent: "space-evenly" }}>
+            <img src={producto.img} className="card-img-top " alt="..." style={{ width: ".." }} /><div class="card-body">
+                    <h5 className="card-title" key={producto.id}>
+                        {producto.titulo}
+                    </h5>
+                    <p className="card-text">
+                        ${producto.categoria}
+                    </p>
+                    <p className="card-text">
+                        ${producto.precio}
+                    </p>
+                    <Link to={`/detalle/${producto.id}`}>
+                        <button className="btn btn-primary">
+                            Detalle del Producto
+                        </button>
+                    </Link>
+                </div>
+        </div>        
+        </></></>
     )
 }
 

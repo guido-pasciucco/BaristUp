@@ -5,10 +5,8 @@ import { collection, getDocs, getFirestore, query, where } from 'firebase/firest
 
 function ItemListContainer({greeting}){
     const [productos, setProductos] = useState ([])
-    //const [producto, setProducto] = useState({})
     const [loading, setLoading] = useState(true)
     const {idCate} = useParams()
-    // el de uno solo ( o sea detalle)
     useEffect(()=>{
         const db = getFirestore()
         if(idCate){
