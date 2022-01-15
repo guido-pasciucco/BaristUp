@@ -32,36 +32,3 @@ function ItemListContainer({greeting}){
 }
 
 export default ItemListContainer
-
-/*
-useEffect(()=>{
-    if(idCate){
-        getFetch
-        .then(resp => setProductos(resp.filter(prod => prod.categoria === idCate)))
-        .catch(err => console.log(err))
-        .finally(()=> setLoading(false))
-    }else{
-        getFetch
-        .then(resp => setProductos(resp))
-        .catch(err => console.log(err))
-        .finally(()=> setLoading(false))
-    }
-},[idCate])
-////////////////////////////////////
-useEffect(()=>{
-    const db = getFirestore()
-    if(idCate){
-        const queryCollection = query(collection(db, 'productos'), where('categoria', '==', idCate))
-        getDocs(queryCollection)
-        .then(resp => setProductos(resp.docs.map(prod => ({id: prod.id, ...prod.data()}))))
-        .catch(err => console.log(err))
-        .finally(()=> setLoading(false))
-    }else{
-        const queryDb = query(db, 'productos')
-        getDocs(queryDb)
-        .then( resp => setProductos(resp.docs.map(prod => ({id: prod.id, ...prod.data()}))))
-        .catch(err => console.log(err))
-        .finally(()=> setLoading(false)) 
-    }
-},[idCate])
-*/

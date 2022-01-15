@@ -10,16 +10,23 @@ const NavBar = () => {
                 <a className="navbar-brand" href="/#" style={{paddingLeft: "50"}}>
                     <strong>BaristUP</strong><br/><p>Fanáticos del café</p></a>
                 <ul className="navbar-nav">
-                    <Link to="/categoria/cafe">
-                        <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/#">Cafe</a>
-                        </li>
-                    </Link>
-                    <Link to="/categoria/accesorios">
-                        <li className="nav-item">
-                            <a className="nav-link" href="/#">Accesorios</a>
-                        </li>
-                    </Link>
+                    <li className="nav-item dropdown">
+                        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorías
+                        </a>
+                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">                            
+                            <Link to="/categoria/cafe">
+                                <li><a className="dropdown-item" href="#">Café</a></li>
+                            </Link>
+                            <Link to="/categoria/accesorios">
+                                <li><a className="dropdown-item" href="#">Accesorios</a></li>
+                            </Link>
+                                <li><hr className="dropdown-divider"/></li>
+                            <Link to="/">
+                                <li><a className="dropdown-item" href="#">Todos los productos</a></li>
+                            </Link>
+                        </ul>
+                    </li>
                     <Link to="/cart">
                         <li className="nav-item">
                             <a className="nav-link"> Carrito <CartWidget /></a>
@@ -33,5 +40,3 @@ const NavBar = () => {
 }
 
 export default NavBar
-
-

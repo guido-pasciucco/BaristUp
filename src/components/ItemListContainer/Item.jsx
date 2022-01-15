@@ -9,7 +9,7 @@ function Item ({producto}){
                         {producto.titulo}
                     </h5>
                     <p className="card-text">
-                        ${producto.categoria}
+                        {producto.categoria}
                     </p>
                     <p className="card-text">
                         ${producto.precio}
