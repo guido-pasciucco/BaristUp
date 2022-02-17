@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> Commit #19
-CODERHOUSE - CARRERA DESARROLLO FULL STACK
-
-CURSO REACT JS - CAMADA 19780
-PROFESOR: Federico Osandón
-TUTOR: Rodrigo Collins
-
-PROYECTO FINAL: BARISTUP
-Tienda online de café de especialiadd y accesorios para baristas (profesionales de la cafería) y aficionados
-
-ALUMNO: Guido Agustín Pasciucco
-
-ENERO 2022
-
-Gif con el recorrido del usuario promedio:
-(((CREAR GIF CON OBS)))
-
-Repositorio en Github:
-https://github.com/guido-pasciucco/BaristUp
-
-Firebase:
-https://console.firebase.google.com/project/baristup-coderreact/firestore/data/~2Fproductos~2F3myPaTaZ5ge5DtjdrgeL?hl=es-419
-
-NOTAS:
-- Se utilizó Bootstrap para mejorar los aspectos estéticos de la app
-- Todas las imágenes fueron alojadas en Firebase
-<<<<<<< HEAD
-- En Firestore podemos encontrar 2 colecciones: Productos y Orders
-=======
-- En Firestore podemos encontrar 2 colecciones: Productos y Orders
-=======
 # BaristUp
 
 Tienda online de café de especialidad y accesorios para baristas (profesionales de la cafería) y aficionados.
@@ -76,8 +42,6 @@ Licencia calle falsa 123.
 
 ## Links
 
-- Deploy (gif) : 
+- Deploy (gif): https://photos.app.goo.gl/fFUTVpaBpnZpc2Pc8
 - Repo en Github: https://github.com/guido-pasciucco/BaristUp
 - Firebase: https://console.firebase.google.com/project/baristup-coderreact/firestore/data/~2Fproducts~2F3myPaTaZ5ge5DtjdrgeL?hl=es-419
->>>>>>> Commit #19
->>>>>>> Commit #19
