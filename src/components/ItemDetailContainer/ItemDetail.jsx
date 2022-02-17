@@ -3,22 +3,22 @@ import { Link } from 'react-router-dom'
 import ItemCount from './ItemCount'
 import {CartContext}  from '../Cart/CartContext'
 
-function ItemDetail({productos}){
+function ItemDetail({products}){
     const [option, setOption] = useState(true)
-    const {agregarAlCarrito} = useContext(CartContext)
-    function onAdd (cantidad){
+    const {addToCart} = useContext(CartContext)
+    function onAdd (quantity){
         setOption(false)
-        agregarAlCarrito(productos, cantidad)
+        addToCart(products, quantity)
     }
     return(
         <div>       
         <>    
         <div style={{border:"4px solid yellow",padding:"20px"}}>
-            <h1 key={productos.id}>{productos.titulo}</h1>
-            <h2>Detalles del Producto</h2><p>{productos.detalle}</p>
-            <h3>${productos.precio}</h3>
-            <img src={productos.img} style={{width:"auto",height:"150px"}}/>
-            <h4>Categoría: {productos.categoria}</h4>
+            <h1 key={products.id}>{products.title}</h1>
+            <h2>Detalles del Producto</h2><p>{products.detail}</p>
+            <h3>${products.price}</h3>
+            <img src={products.img} style={{width:"auto",height:"150px"}}/>
+            <h4>Categoría: {products.category}</h4>
         </div>
         {option
             ? <ItemCount onAdd={onAdd} />

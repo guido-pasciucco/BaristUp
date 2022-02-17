@@ -1,25 +1,25 @@
-import {useState, useEffect} from 'react'
-import {useParams} from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import ItemDetail from './ItemDetail'
-import { collection, getDoc, doc, getFirestore, query, where } from 'firebase/firestore'
+import { getDoc, doc, getFirestore } from 'firebase/firestore'
 
 function ItemDetailContainer(){
-    const [productos, setProductos] = useState ({})
+    const [products, setProducts] = useState ({})
     const [loading, setLoading] = useState(true)
     const {id} = useParams()
-    console.log(id)
-    useEffect(()=>{
+    //console.log(id)
+    useEffect(()=>{   
         const db = getFirestore()
-        const queryDb = doc(db, 'productos', id)
+        const queryDb = doc(db, 'products', id)
         getDoc(queryDb)        
-        .then(resp => setProductos({id: resp.id, ...resp.data()}))
+        .then(resp => setProducts({id: resp.id, ...resp.data()}))
         .catch(err => console.log(err))
-        .finally(()=> setLoading(false))
+        .finally(()=> setLoading(false))   
     }, [id])
     return(
         <> <div> {loading ?
         <h2>Cargando Detalle...</h2> : 
-        <ItemDetail productos={productos}/>}</div></>
+        <ItemDetail products={products}/>}</div></>
     )
-}
+}   
 export default ItemDetailContainer

@@ -4,31 +4,57 @@ import ItemList from '../ItemListContainer/ItemList'
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
 
 function ItemListContainer({greeting}){
-    const [productos, setProductos] = useState ([])
+    
+    const [products, setProducts] = useState ([])
     const [loading, setLoading] = useState(true)
     const {idCate} = useParams()
+    
     useEffect(()=>{
+
         const db = getFirestore()
-        if(idCate){
-            const queryCollection = query(collection(db,'productos'), where('categoria','==',idCate)) 
-            getDocs(queryCollection)
-            .then(resp => setProductos(resp.docs.map(prod => ({id: prod.id, ...prod.data()}))))
-            .catch(err => console.log(err))
-            .finally(()=> setLoading(false)) 
-        }else{
-            const queryCollection = query(collection(db,'productos'))
-            getDocs(queryCollection)
-            .then(resp => setProductos(resp.docs.map(prod => ({id: prod.id, ...prod.data()}))))
-            .catch(err => console.log(err))
-            .finally(()=> setLoading(false)) 
-        }
+        const queryCollection = idCate ?
+            query(collection(db, 'products'), where('category', '==', idCate))
+        :
+            query(collection(db, 'products'))
+        getDocs(queryCollection)
+        .then(resp => setProducts(resp.docs.map(prod => ({id: prod.id, ...prod.data()}))))
+        .catch(err => console.log(err))
+        .finally(()=> setLoading(false))
+        
     },[idCate])
-    console.log(idCate)
+    
     return (
         <div>
-            {greeting} {loading ? <h2>Cargando...</h2> : <ItemList productos={productos}/> }
+            {greeting} {loading ? <h2>Cargando...</h2> : <ItemList products={products}/> }
         </div>
     )
 }
 
 export default ItemListContainer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

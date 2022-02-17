@@ -15,15 +15,15 @@ const NavBar = () => {
                             Categorías
                         </a>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">                            
-                            <Link to="/categoria/cafe">
+                            <Link to="/category/cafe">
                                 <li><a className="dropdown-item" href="#">Café</a></li>
                             </Link>
-                            <Link to="/categoria/accesorios">
+                            <Link to="/category/accesorios">
                                 <li><a className="dropdown-item" href="#">Accesorios</a></li>
                             </Link>
                                 <li><hr className="dropdown-divider"/></li>
                             <Link to="/">
-                                <li><a className="dropdown-item" href="#">Todos los productos</a></li>
+                                <li><a className="dropdown-item" href="#">Todos los products</a></li>
                             </Link>
                         </ul>
                     </li>

@@ -6,13 +6,13 @@ function Item ({producto}){
         <div className="card col-md-4" style={{ height : "700px", backgroundColor : "brown", justifyContent: "space-evenly" }}>
             <img src={producto.img} className="card-img-top " alt="..." style={{ width: ".." }} /><div class="card-body">
                     <h5 className="card-title" key={producto.id}>
-                        {producto.titulo}
+                        {producto.title}
                     </h5>
                     <p className="card-text">
-                        {producto.categoria}
+                        {producto.category}
                     </p>
                     <p className="card-text">
-                        ${producto.precio}
+                        ${producto.price}
                     </p>
                     <Link to={`/detalle/${producto.id}`}>
                         <button className="btn btn-primary">
